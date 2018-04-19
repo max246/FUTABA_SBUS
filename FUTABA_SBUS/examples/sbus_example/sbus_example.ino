@@ -1,6 +1,9 @@
 #include <FUTABA_SBUS.h>
-#include <Streaming.h>
+#include <SoftwareSerial.h>
 
+//Connect SBUS To pin 10
+
+SoftwareSerial mySerial(10, 11); // RX, TX
 
 FUTABA_SBUS sBus;
 
@@ -16,6 +19,6 @@ void loop(){
     sBus.UpdateServos();
     sBus.UpdateChannels();
     sBus.toChannels = 0;
-    Serial<<sBus.channels[0]<<","<<sBus.channels[1]<<","<<sBus.channels[2]<<"\r\n";
+    Serial.println(sBus.channels[0]);
   }
 }

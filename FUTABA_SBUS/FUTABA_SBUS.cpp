@@ -1,4 +1,7 @@
 #include "FUTABA_SBUS.h"
+#include <SoftwareSerial.h>
+
+SoftwareSerial port(10, 11); // RX, TX
 
 void FUTABA_SBUS::begin(){
 	uint8_t loc_sbusData[25] = {

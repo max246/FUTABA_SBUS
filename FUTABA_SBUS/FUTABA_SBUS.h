@@ -9,7 +9,7 @@
 #define SBUS_SIGNAL_LOST        0x01
 #define SBUS_SIGNAL_FAILSAFE    0x03
 #define BAUDRATE 100000
-#define port Serial1
+//#define port Serial
 //#define ALL_CHANNELS
 
 
